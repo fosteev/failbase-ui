@@ -7,11 +7,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                use: ['babel-loader']
-            },
-            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
@@ -60,6 +55,6 @@ module.exports = {
         contentBase: './dist',
         historyApiFallback: true,
         hot: true,
-        port: 3000
+        port: 5000
     }
 };
