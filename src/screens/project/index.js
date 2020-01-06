@@ -23,7 +23,7 @@ export default function Project(props) {
         request(`project${location.pathname}`, 'GET').then(resp => {
             setData(resp);
         })
-    })
+    }, [])
 
     return (
         <div>

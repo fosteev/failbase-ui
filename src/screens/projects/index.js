@@ -34,7 +34,7 @@ export default function Projects(props) {
         request('projects', 'GET').then(resp => {
             setData(resp);
         });
-    })
+    }, [])
 
     return (
         <div>
