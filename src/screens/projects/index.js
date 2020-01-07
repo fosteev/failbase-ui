@@ -29,16 +29,18 @@ const columns = [{
 
 export default function Projects(props) {
     const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         request('projects', 'GET').then(resp => {
             setData(resp);
+            setLoading(false);
         });
     }, [])
 
     return (
         <div>
-            <Table dataSource={data} columns={columns}/>;
+            <Table loading={loading} dataSource={data} columns={columns}/>;
         </div>
     )
 }
