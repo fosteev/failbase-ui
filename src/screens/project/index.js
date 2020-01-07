@@ -19,6 +19,7 @@ const columns = [{
 },{
     title: 'Date',
     dataIndex: 'date',
+    sorter: true,
     key: 'date',
     render: v => {
         const date = new Date(v);
@@ -39,7 +40,7 @@ export default function Project(props) {
 
     useEffect(() => {
         request(`project${location.pathname}`, 'GET').then(resp => {
-            setData(resp);
+            setData(resp.reverse());
             setLoading(false);
         })
     }, [])
@@ -47,7 +48,7 @@ export default function Project(props) {
     return (
         <div>
             {location.pathname}
-            <Table loading={loading} dataSource={data} columns={columns}/>;
+            <Table loading={loading} dataSource={data} columns={columns} locale={'sort'}/>;
         </div>
     )
 }
