@@ -30,7 +30,11 @@ const columns = [{
     dataIndex: 'additional_json',
     key: 'json',
     render: v => {
-        return <ReactJson src={JSON.parse(v)} />
+        try {
+            return <ReactJson src={JSON.parse(v)} />
+        } catch (e) {
+            return 'Invalid JSON: ' + v;
+        }
     }
 }];
 

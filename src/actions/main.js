@@ -1,4 +1,4 @@
-const API_URL = 'http://95.213.251.42:3000';
+const API_URL = `https://failbase.fosteev.ru`;
 
 const getHeaders = () => {
     const headers = new Headers();
