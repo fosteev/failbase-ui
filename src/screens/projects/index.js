@@ -8,6 +8,7 @@ const columns = [{
     title: 'Name',
     dataIndex: 'name',
     key: 'name',
+    render: v => v.split('_').join('.')
 }, {
     title: 'Count',
     dataIndex: 'count',

@@ -15,15 +15,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
@@ -37,13 +28,13 @@
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1",
-    "webpack-merge": "^4.2.2",
-    "core-js": "^2.6.5"
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "@nivo/line": "^0.61.1",
     "antd": "^3.26.6",
     "babel-plugin-import": "^1.13.0",
-    "core-js": "^3.6.2",
+    "core-js": "^2.6.10",
     "history": "^4.7.2",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
@@ -52,6 +43,7 @@
     "react-router": "^5.1.1",
     "react-router-dom": "^5.1.1",
     "react-scripts": "^3.1.2",
+    "recharts": "1.8.5",
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
